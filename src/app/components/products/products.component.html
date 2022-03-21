@@ -1,0 +1,28 @@
+<div class="container">
+  <ul class="nav nav-tabs mt-2 mb-2">
+    <!-- get the categories -->
+    <li *ngFor="let key of categories" class="nav-item">
+      <a [ngClass]="{ active: activeCategory === key }" class="nav-link text-dark" aria-current="page" (click)="onSelectCategory(key)">{{key}}</a>
+    </li>
+  </ul>
+</div>
+<!-- Get the products in cards, show the in page -->
+<div class="container">
+    <div class="row">
+      <div *ngFor="let product of filterProducts" class="col-sm-4 mb-3">
+        <!-- Card'a tıklandığında ürün detayına gidilecek -->
+        <!-- [routerLink]="['/detailproduct', product.id]" -->
+          <div  class="card rounded-3"> 
+            <img [routerLink]="['/detailproduct', product.id]" src="{{product.img}}" class="card-img-top img " alt="...">
+            <div class="card-body" [routerLink]="['/detailproduct', product.id]">
+              <h5 class="card-title">{{product.productName}}</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">{{product.description}}</li>
+              <li class="list-group-item">{{product.price}}<i class="fa fa-usd ms-1"></i></li>
+              <button class="btn btn-primary" (click)="addtocart(product)">Ekle</button>
+            </ul>
+          </div>
+      </div>  
+    </div>
+</div>  

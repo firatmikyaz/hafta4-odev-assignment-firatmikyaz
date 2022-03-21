@@ -1,0 +1,20 @@
+<div *ngIf="login">
+  <header>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="navbar-brand aling-item-center d-flex">
+            <i class="fa fa-shopping-bag fs-3 ms-3"></i>&nbsp;
+            <strong>SHOPPING</strong> 
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control w-100" placeholder="search products">
+      </div>
+        <div class="me-2">
+          <button [routerLink]="['/products']" class="btn btn-primary btn-sm me-3">Products</button>
+          <button [routerLink]="['/cart']" class="btn btn-primary btn-sm me-3"><i class="fa fa-shopping-cart fs-3"></i></button>
+          <button (click)="onLogout()" class="btn btn-primary btn-sm me-4 me-3">Logout</button>
+        </div>   
+    </div> 
+</header>
+
+
+
