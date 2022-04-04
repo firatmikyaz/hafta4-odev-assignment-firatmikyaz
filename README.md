@@ -55,7 +55,7 @@
 ## Installation
 1. Clone the repo
 ```sh
-git clone https://github.com/164-orion-innovation-turkey-bootcamp/hafta4-odev-assignment-safciezgi
+git clone https://github.com/firatmikyaz/hafta4-odev-assignment-firatmikyaz.git
 ```
 2. Install NPM packages
 ```sh
